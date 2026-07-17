@@ -2,7 +2,7 @@
 
 ## Overview
 
-Detects facial emotions from uploaded images using Amazon Rekognition.
+A web application which is hosted on localhost that detects facial emotions from uploaded images using Amazon Rekognition.
 
 ## Features
 
