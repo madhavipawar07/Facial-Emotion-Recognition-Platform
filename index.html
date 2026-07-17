@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-face-smile"></i>
+            Emotion AI
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="history.html"><i class="fa-solid fa-clock-rotate-left"></i> History</a></li>
+            <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-shell">
+        <header class="page-header">
+            <div class="header-label">Live emotion detection</div>
+            <h1>Quick, clear face analysis.</h1>
+            <p>Use your camera to capture a face and see emotion, age, gender, smile, and facial details in a straightforward dashboard.</p>
+        </header>
+
+        <section class="content-grid">
+            <div class="camera-panel panel">
+                <div class="panel-title">
+                    <h2><i class="fa-solid fa-camera"></i> Camera</h2>
+                    <p>Open the camera and capture a face for analysis.</p>
+                </div>
+                <div class="camera-frame">
+                    <video id="camera" autoplay playsinline muted></video>
+                    <canvas id="canvas" style="display:none;"></canvas>
+                    <img id="capturedImage" alt="Captured preview" />
+                </div>
+                <div class="button-row">
+                    <button id="startCamera"><i class="fa-solid fa-video"></i> Start Camera</button>
+                    <button id="capture"><i class="fa-solid fa-camera-retro"></i> Capture Photo</button>
+                </div>
+                <div id="loading" class="loading-card" style="display:none; margin-top: 18px;">
+                    <div class="loader"></div>
+                    <span>Analyzing face...</span>
+                </div>
+            </div>
+
+            <div id="results" class="results-panel panel">
+                <div class="panel-title">
+                    <h2><i class="fa-solid fa-chart-bar"></i> Results</h2>
+                    <p>Live face analysis data appears here.</p>
+                </div>
+                <div class="results-grid">
+                    <div class="result-card"><span>😊</span><strong>Emotion</strong><p id="emotion">-</p></div>
+                    <div class="result-card"><span>🎂</span><strong>Age</strong><p id="age">-</p></div>
+                    <div class="result-card"><span>👤</span><strong>Gender</strong><p id="gender">-</p></div>
+                    <div class="result-card"><span>😀</span><strong>Smile</strong><p id="smile">-</p></div>
+                    <div class="result-card"><span>👓</span><strong>Glasses</strong><p id="glasses">-</p></div>
+                    <div class="result-card"><span>🧔</span><strong>Beard</strong><p id="beard">-</p></div>
+                    <div class="result-card"><span>😎</span><strong>Sunglasses</strong><p id="sunglasses">-</p></div>
+                    <div class="result-card"><span>👀</span><strong>Eyes open</strong><p id="eyes">-</p></div>
+                    <div class="result-card"><span>💡</span><strong>Brightness</strong><p id="brightness">-</p></div>
+                    <div class="result-card"><span>📷</span><strong>Sharpness</strong><p id="sharpness">-</p></div>
+                    <div class="result-card"><span>🎯</span><strong>Confidence</strong><p id="confidence">-</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Emotion Detection System • HTML • CSS • JavaScript • AWS Rekognition • Lambda • API Gateway • S3 • DynamoDB</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
